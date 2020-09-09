@@ -1,0 +1,42 @@
+//DEFAULT OPTIONS
+
+// Prefix for Hover class name
+$nameSpace: "dtt" !default;
+
+// Duration
+$fastDuration: 0.1s !default;
+$mediumDuration: 0.3s !default;
+$slowDuration: 0.5s !default;
+
+// Colors
+$primaryColor: #e1e1e1 !default;
+$secondaryColor: #666 !default;
+$hightlightColor: #ccc !default;
+$activeColor: #2098d1;
+$shadowColor: rgba(0, 0, 0, 0.6) !default;
+
+// Speech bubbles options
+$tipWidth: 10px !default; //the width of the speech bubble tip
+$tipHeight: 10px !default; //the height of the speech bubble tip
+$tipColor: $primaryColor !default;
+
+// Arrows options
+$spaceBetweenTextAndArrows: 2.2em !default;
+
+// Curl dimentstions
+$curlWidth: 25px !default;
+$curlHeight: 25px !default;
+
+// Curl clors
+$revealAreaColor: white !default;
+$curlLineColor: #aaa !default;
+$curlTransitionColor: #ccc !default; // final color of the back of the curl
+
+//Brower Prefixes - which CSs refixes should be useed?
+$webkit: true !default;
+$moz: false !default;
+$ms: false !default;
+$o: false !default;
+
+// Compile with or without classes
+$includeClasses: true !default;

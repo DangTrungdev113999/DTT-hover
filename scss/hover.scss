@@ -1,0 +1,23 @@
+@import "options";
+@import "mixins";
+@import "hacks";
+
+.btn {
+  background-color: hsl(0, 0%, 88%);
+  box-shadow: hsla(0, 0%, 0%, 0) 0px 0px 1px 0px;
+  color: hsl(0, 0%, 40%);
+  display: inline-block;
+  gap: normal;
+  line-height: 22.4px;
+  margin: 6.4px;
+  padding: 16px;
+  cursor: pointer;
+}
+
+/* BACKGROUND TRANSITIONS */
+@import "effects/background-transitions/fade";
+@if $includeClasses {
+  .#{$nameSpace}-fade {
+    @include fade();
+  }
+}
