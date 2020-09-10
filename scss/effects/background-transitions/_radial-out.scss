@@ -1,22 +1,24 @@
-// Sweep To Top
+// Radial out
 
-@mixin sweep-to-top {
+@mixin radial-out {
   @include hacks();
   position: relative;
+  overflow: hidden;
   @include prefixed(transition-property, color);
   @include prefixed(transition-duration, $mediumDuration);
 
   &:before {
     content: "";
     position: absolute;
+    z-index: -1;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: -1;
+    border-radius: 100%;
     background-color: $activeColor;
-    @include prefixed(transform, ScaleY(0));
-    @include prefixed(transform-origin, 50% 100%);
+    @include prefixed(transform, scale(0));
+    @include prefixed(transform-origin, 50% 50%);
     @include prefixed(transition-property, transform);
     @include prefixed(transition-duration, $mediumDuration);
     @include prefixed(transition-timing-function, ease-out);
@@ -27,7 +29,7 @@
   &:focus {
     color: white;
     &:before {
-      @include prefixed(transform, ScaleY(1));
+      @include prefixed(transform, scale(2));
     }
   }
 }

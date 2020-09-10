@@ -3,9 +3,9 @@
 @import "hacks";
 
 .btn {
-  background-color: hsl(0, 0%, 88%);
+  background-color: $backgroundColor;
   box-shadow: hsla(0, 0%, 0%, 0) 0px 0px 1px 0px;
-  color: hsl(0, 0%, 40%);
+  color: $primaryColor;
   display: inline-block;
   gap: normal;
   line-height: 22.4px;
@@ -33,5 +33,103 @@
 @if $includeClasses {
   .#{$nameSpace}-sweep-to-left {
     @include sweep-to-left();
+  }
+}
+
+@import "effects/background-transitions/sweep-to-botton";
+@if $includeClasses {
+  .#{$nameSpace}-sweep-to-botton {
+    @include sweep-to-botton();
+  }
+}
+
+@import "effects/background-transitions/sweep-to-top";
+@if $includeClasses {
+  .#{$nameSpace}-sweep-to-top {
+    @include sweep-to-top();
+  }
+}
+
+@import "effects/background-transitions/bounce-to-right";
+@if $includeClasses {
+  .#{$nameSpace}-bounce-to-right {
+    @include bounce-to-right();
+  }
+}
+
+@import "effects/background-transitions/bounce-to-left";
+@if $includeClasses {
+  .#{$nameSpace}-bounce-to-left {
+    @include bounce-to-left();
+  }
+}
+
+@import "effects/background-transitions/bounce-to-top";
+@if $includeClasses {
+  .#{$nameSpace}-bounce-to-top {
+    @include bounce-to-top();
+  }
+}
+
+@import "effects/background-transitions/bounce-to-botton";
+@if $includeClasses {
+  .#{$nameSpace}-bounce-to-botton {
+    @include bounce-to-botton();
+  }
+}
+
+@import "effects/background-transitions/radial-out";
+@if $includeClasses {
+  .#{$nameSpace}-radial-out {
+    @include radial-out();
+  }
+}
+
+@import "effects/background-transitions/radial-in";
+@if $includeClasses {
+  .#{$nameSpace}-radial-in {
+    @include radial-in();
+  }
+}
+
+@import "effects/background-transitions/rectangle-out";
+@if $includeClasses {
+  .#{$nameSpace}-rectangle-out {
+    @include rectangle-out();
+  }
+}
+
+@import "effects/background-transitions/rectangle-in";
+@if $includeClasses {
+  .#{$nameSpace}-rectangle-in {
+    @include rectangle-in();
+  }
+}
+
+@import "effects/background-transitions/shutter-in-horizontal";
+@if $includeClasses {
+  .#{$nameSpace}-shutter-in-horizontal {
+    @include shutter-in-horizontal();
+  }
+}
+
+@import "effects/background-transitions/shutter-out-horizontal";
+@if $includeClasses {
+  .#{$nameSpace}-shutter-out-horizontal {
+    @include shutter-out-horizontal();
+  }
+}
+
+@import "effects/background-transitions/shutter-in-vertical";
+@if $includeClasses {
+  .#{$nameSpace}-shutter-in-vertical {
+    @include shutter-in-vertical();
+  }
+}
+
+@import "effects/background-transitions/shutter-out-vertical";
+@if $includeClasses {
+  .#{$nameSpace}-shutter-out-vertical {
+    @include shutter-out-vertical();
   }
 }

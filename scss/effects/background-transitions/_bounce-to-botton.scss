@@ -1,6 +1,6 @@
-// Sweep To Top
+//  Bounce To Left
 
-@mixin sweep-to-top {
+@mixin bounce-to-botton {
   @include hacks();
   position: relative;
   @include prefixed(transition-property, color);
@@ -9,14 +9,14 @@
   &:before {
     content: "";
     position: absolute;
+    z-index: -1;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: -1;
     background-color: $activeColor;
     @include prefixed(transform, ScaleY(0));
-    @include prefixed(transform-origin, 50% 100%);
+    @include prefixed(transform-origin, 50% 0);
     @include prefixed(transition-property, transform);
     @include prefixed(transition-duration, $mediumDuration);
     @include prefixed(transition-timing-function, ease-out);
@@ -28,6 +28,10 @@
     color: white;
     &:before {
       @include prefixed(transform, ScaleY(1));
+      @include prefixed(
+        transition-timing-function,
+        cubic-bezier(0.52, 1.64, 0.37, 0.66)
+      );
     }
   }
 }

@@ -1,22 +1,23 @@
-// Sweep To Top
+// Shutter in Horizontal
 
-@mixin sweep-to-top {
+@mixin shutter-in-horizontal {
   @include hacks();
   position: relative;
+  background-color: $activeColor;
   @include prefixed(transition-property, color);
   @include prefixed(transition-duration, $mediumDuration);
 
   &:before {
     content: "";
     position: absolute;
+    z-index: -1;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: -1;
-    background-color: $activeColor;
-    @include prefixed(transform, ScaleY(0));
-    @include prefixed(transform-origin, 50% 100%);
+    background-color: $backgroundColor;
+    @include prefixed(transform, scaleX(1));
+    @include prefixed(transform-origin, 50%);
     @include prefixed(transition-property, transform);
     @include prefixed(transition-duration, $mediumDuration);
     @include prefixed(transition-timing-function, ease-out);
@@ -27,7 +28,7 @@
   &:focus {
     color: white;
     &:before {
-      @include prefixed(transform, ScaleY(1));
+      @include prefixed(transform, scaleX(0));
     }
   }
 }
