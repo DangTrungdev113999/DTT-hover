@@ -1,0 +1,15 @@
+// Hollow
+
+@mixin hollow {
+  $borderWith: 4px;
+  @include hacks();
+  @include prefixed(transition-property, background-color);
+  @include prefixed(transition-duration, $mediumDuration);
+  box-shadow: inset 0 0 0 $borderWith $backgroundColor, 0 0 1px rgba(0, 0, 0, 0); /* Hack to improve aliasing on mobile/tablet devices */
+
+  &:hover,
+  &:active,
+  &:focus {
+    background: none;
+  }
+}

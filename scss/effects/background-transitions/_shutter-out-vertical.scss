@@ -1,5 +1,4 @@
-// Shutter out Vertical
-
+/* Shutter out Vertical */
 @mixin shutter-out-vertical() {
   @include hacks();
   position: relative;
