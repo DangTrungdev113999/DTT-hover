@@ -1,0 +1,29 @@
+/* Overline Left */
+
+@mixin overline-left {
+  @include hacks();
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 100%;
+    background-color: $activeColor;
+    height: 4px;
+    @include prefixed(transition-property, "right");
+    @include prefixed(transition-duration, $mediumDuration);
+    @include prefixed(transition-timing-function, ease-out);
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    &:before {
+      right: 0;
+    }
+  }
+}

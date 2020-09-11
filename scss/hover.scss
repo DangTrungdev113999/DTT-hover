@@ -2,6 +2,11 @@
 @import "mixins";
 @import "hacks";
 
+.container {
+  width: 900px;
+  margin: 0 auto;
+}
+
 .btn {
   background-color: $backgroundColor;
   box-shadow: hsla(0, 0%, 0%, 0) 0px 0px 1px 0px;
@@ -10,7 +15,7 @@
   gap: normal;
   line-height: 22.4px;
   margin: 6.4px;
-  padding: 16px;
+  padding: 12px;
   cursor: pointer;
 }
 
@@ -152,5 +157,96 @@
 @if $includeClasses {
   .#{$nameSpace}-trim {
     @include trim();
+  }
+}
+
+@import "effects/border-transitions/ripple-out";
+@if $includeClasses {
+  .#{$nameSpace}-ripple-out {
+    @include ripple-out();
+  }
+}
+
+@import "effects/border-transitions/ripple-in";
+@if $includeClasses {
+  .#{$nameSpace}-ripple-in {
+    @include ripple-in();
+  }
+}
+
+@import "effects/border-transitions/outline-out";
+@if $includeClasses {
+  .#{$nameSpace}-outline-out {
+    @include outline-out();
+  }
+}
+
+@import "effects/border-transitions/outline-in";
+@if $includeClasses {
+  .#{$nameSpace}-outline-in {
+    @include outline-in();
+  }
+}
+
+@import "effects/border-transitions/round-corner";
+@if $includeClasses {
+  .#{$nameSpace}-round-corner {
+    @include round-corner();
+  }
+}
+
+@import "effects/border-transitions/underline-from-left";
+@if $includeClasses {
+  .#{$nameSpace}-underline-from-left {
+    @include underline-from-left();
+  }
+}
+
+@import "effects/border-transitions/underline-from-right";
+@if $includeClasses {
+  .#{$nameSpace}-underline-from-right {
+    @include underline-from-right();
+  }
+}
+
+@import "effects/border-transitions/underline-from-center";
+@if $includeClasses {
+  .#{$nameSpace}-underline-from-center {
+    @include underline-from-center();
+  }
+}
+
+@import "effects/border-transitions/reveal";
+@if $includeClasses {
+  .#{$nameSpace}-reveal {
+    @include reveal();
+  }
+}
+
+@import "effects/border-transitions/overline-reveal";
+@if $includeClasses {
+  .#{$nameSpace}-overline-reveal {
+    @include overline-reveal();
+  }
+}
+
+@import "effects/border-transitions/overline-left";
+@if $includeClasses {
+  .#{$nameSpace}-overline-left {
+    @include overline-left();
+  }
+}
+
+@import "effects/border-transitions/overline-center";
+@if $includeClasses {
+  .#{$nameSpace}-overline-center {
+    @include overline-center();
+  }
+}
+
+@import "effects/border-transitions/overline-right";
+@if $includeClasses {
+  .#{$nameSpace}-overline-right {
+    @include overline-right();
   }
 }

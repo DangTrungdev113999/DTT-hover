@@ -1,0 +1,30 @@
+/* Reveal */
+
+@mixin reveal {
+  @include hacks();
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-style: solid;
+    border-color: $activeColor;
+    border-width: 0;
+    @include prefixed(transition-property, border-width);
+    @include prefixed(transition-duration, $mediumDuration);
+    @include prefixed(transition-timing-function, ease-out);
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    &:before {
+      border-width: 4px;
+    }
+  }
+}

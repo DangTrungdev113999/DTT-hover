@@ -1,0 +1,38 @@
+/* Ripple Out */
+
+@include keyframes(#{$nameSpace}-ripple-out) {
+  100% {
+    top: -(6px + 6px);
+    left: -(6px + 6px);
+    right: -(6px + 6px);
+    bottom: -(6px + 6px);
+    opacity: 0;
+  }
+}
+
+@mixin ripple-out {
+  $innerBorderWith: 6px;
+  $outerBorderWith: 0px;
+  @include hacks();
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: $outerBorderWith;
+    left: $outerBorderWith;
+    right: $outerBorderWith;
+    bottom: $outerBorderWith;
+    border: $innerBorderWith solid $backgroundColor;
+
+    @include prefixed(animation-duration, 1s);
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    &:before {
+      @include prefixed(animation-name, #{$nameSpace}-ripple-out);
+    }
+  }
+}

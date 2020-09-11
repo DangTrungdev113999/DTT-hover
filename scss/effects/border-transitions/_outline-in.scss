@@ -1,0 +1,34 @@
+/* Outline In */
+
+@mixin outline-in {
+  $borderWidth: 4px;
+  $outerWidth: -8px;
+  @include hacks();
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: $outerWidth * 2;
+    left: $outerWidth * 2;
+    right: $outerWidth * 2;
+    bottom: $outerWidth * 2;
+    border: $borderWidth solid $backgroundColor;
+    opacity: 0;
+    @include prefixed(transition-property, "top left right bottom");
+    @include prefixed(transition-duration, $mediumDuration);
+    @include prefixed(transition-timing-function, ease-out);
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    &:before {
+      top: $outerWidth;
+      left: $outerWidth;
+      right: $outerWidth;
+      bottom: $outerWidth;
+      opacity: 1;
+    }
+  }
+}

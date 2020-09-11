@@ -1,0 +1,30 @@
+/* Overline Reveal */
+
+@mixin overline-reveal {
+  @include hacks();
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $activeColor;
+    height: 0;
+    @include prefixed(transition-property, "height");
+    @include prefixed(transition-duration, $mediumDuration);
+    @include prefixed(transition-timing-function, ease-out);
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    &:before {
+      height: 4px;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+/* Outline Out */
+
+@mixin outline-out {
+  $innerBorderWidth: 4px;
+  $outerWidth: -(4px + 4px);
+  @include hacks();
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: $innerBorderWidth solid $backgroundColor;
+    @include prefixed(transition-property, "top left right bottom");
+    @include prefixed(transition-duration, $mediumDuration);
+    @include prefixed(transition-timing-function, ease-out);
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    &:before {
+      top: $outerWidth;
+      left: $outerWidth;
+      right: $outerWidth;
+      bottom: $outerWidth;
+    }
+  }
+}

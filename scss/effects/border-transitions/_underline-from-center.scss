@@ -1,0 +1,30 @@
+/* Underline From Center */
+
+@mixin underline-from-center {
+  @include hacks();
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    height: 4px;
+    background: $activeColor;
+    @include prefixed(transition-property, "right left");
+    @include prefixed(transition-duration, $mediumDuration);
+    @include prefixed(transition-timing-function, ease-out);
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    &:before {
+      right: 0;
+      left: 0;
+    }
+  }
+}

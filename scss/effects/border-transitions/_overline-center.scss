@@ -1,0 +1,30 @@
+/* Overline Center */
+
+@mixin overline-center {
+  @include hacks();
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    background-color: $activeColor;
+    height: 4px;
+    @include prefixed(transition-property, "left right");
+    @include prefixed(transition-duration, $mediumDuration);
+    @include prefixed(transition-timing-function, ease-out);
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    &:before {
+      left: 0;
+      right: 0;
+    }
+  }
+}
