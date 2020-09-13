@@ -250,3 +250,39 @@
     @include overline-right();
   }
 }
+
+// Shadow And Glow Ransitions
+@import "effects/shadow-and-glow-ransitions/shadow";
+@if $includeClasses {
+  .#{$nameSpace}-shadow {
+    @include shadow();
+  }
+}
+
+@import "effects/shadow-and-glow-ransitions/grow-shadow";
+@if $includeClasses {
+  .#{$nameSpace}-grow-shadow {
+    @include grow-shadow();
+  }
+}
+
+@import "effects/shadow-and-glow-ransitions/glow";
+@if $includeClasses {
+  .#{$nameSpace}-glow {
+    @include glow();
+  }
+}
+
+@import "effects/shadow-and-glow-ransitions/box-shadow-inset";
+@if $includeClasses {
+  .#{$nameSpace}-box-shadow-inset {
+    @include box-shadow-inset();
+  }
+}
+
+@import "effects/shadow-and-glow-ransitions/box-shadow-outset";
+@if $includeClasses {
+  .#{$nameSpace}-box-shadow-outset {
+    @include box-shadow-outset();
+  }
+}

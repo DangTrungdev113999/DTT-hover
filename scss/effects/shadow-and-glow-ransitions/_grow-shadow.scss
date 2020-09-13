@@ -1,0 +1,13 @@
+/* Grow Shadow */
+@mixin grow-shadow {
+  @include hacks();
+  @include prefixed(transition-property, "transform box-shadow");
+  @include prefixed(transition-duration, $fastDuration);
+
+  &:hover,
+  &:active,
+  &:focus {
+    box-shadow: 0 10px 10px -8px $shadowColor;
+    @include prefixed(transform, scale(1.1));
+  }
+}
