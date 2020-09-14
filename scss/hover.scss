@@ -251,7 +251,7 @@
   }
 }
 
-// Shadow And Glow Ransitions
+// SHADOW AND GLOW RANSITIONS
 @import "effects/shadow-and-glow-ransitions/shadow";
 @if $includeClasses {
   .#{$nameSpace}-shadow {
@@ -354,5 +354,132 @@
 @if $includeClasses {
   .#{$nameSpace}-bubble-float-bottom {
     @include bubble-float-bottom();
+  }
+}
+
+// 2D TRANSITIONS
+@import "effects/2d-transitions/grow";
+@if $includeClasses {
+  .#{$nameSpace}-grow {
+    @include grow();
+  }
+}
+
+@import "effects/2d-transitions/shrink";
+@if $includeClasses {
+  .#{$nameSpace}-shrink {
+    @include shrink();
+  }
+}
+
+@import "effects/2d-transitions/pulse";
+@if $includeClasses {
+  .#{$nameSpace}-pulse {
+    @include pulse();
+  }
+}
+
+@import "effects/2d-transitions/pulse-grow";
+@if $includeClasses {
+  .#{$nameSpace}-pulse-grow {
+    @include pulse-grow();
+  }
+}
+
+@import "effects/2d-transitions/pulse-shrink";
+@if $includeClasses {
+  .#{$nameSpace}-pulse-shrink {
+    @include pulse-shrink();
+  }
+}
+
+@import "effects/2d-transitions/push";
+@if $includeClasses {
+  .#{$nameSpace}-push {
+    @include push();
+  }
+}
+
+@import "effects/2d-transitions/pop";
+@if $includeClasses {
+  .#{$nameSpace}-pop {
+    @include pop();
+  }
+}
+
+@import "effects/2d-transitions/bounce-in";
+@if $includeClasses {
+  .#{$nameSpace}-bounce-in {
+    @include bounce-in();
+  }
+}
+
+@import "effects/2d-transitions/bounce-out";
+@if $includeClasses {
+  .#{$nameSpace}-bounce-out {
+    @include bounce-out();
+  }
+}
+
+@import "effects/2d-transitions/rotate";
+@if $includeClasses {
+  .#{$nameSpace}-rotate {
+    @include rotate();
+  }
+}
+
+@import "effects/2d-transitions/grow-rotate";
+@if $includeClasses {
+  .#{$nameSpace}-grow-rotate {
+    @include grow-rotate();
+  }
+}
+
+@import "effects/2d-transitions/float";
+@if $includeClasses {
+  .#{$nameSpace}-float {
+    @include float();
+  }
+}
+
+@import "effects/2d-transitions/sink";
+@if $includeClasses {
+  .#{$nameSpace}-sink {
+    @include sink();
+  }
+}
+
+@import "effects/2d-transitions/bob";
+@if $includeClasses {
+  .#{$nameSpace}-bob {
+    @include bob();
+  }
+}
+
+@import "effects/2d-transitions/hang";
+@if $includeClasses {
+  .#{$nameSpace}-hang {
+    @include hang();
+  }
+}
+
+@import "effects/2d-transitions/skew";
+@if $includeClasses {
+  .#{$nameSpace}-skew {
+    @include skew();
+  }
+}
+
+@import "effects/2d-transitions/skew-backward";
+@if $includeClasses {
+  .#{$nameSpace}-skew-backward {
+    @include skew-backward();
+  }
+}
+
+@import "effects/2d-transitions/skew-forward";
+@if $includeClasses {
+  .#{$nameSpace}-skew-forward {
+    @include skew-forward();
   }
 }
