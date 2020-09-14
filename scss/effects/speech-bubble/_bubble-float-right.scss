@@ -1,0 +1,29 @@
+/* Buddle Float Right */
+
+@mixin bubble-float-right {
+  @include hacks();
+  position: relative;
+  @include prefixed(transition-property, transform);
+  @include prefixed(transition-duration, $mediumDuration);
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    top: calc(50% - #{$tipWidth});
+    border-style: solid;
+    border-width: $tipWidth 0 $tipWidth $tipWidth;
+    border-color: transparent transparent transparent $tipColor;
+    @include prefixed(transition-property, "right");
+    @include prefixed(transition-duration, $mediumDuration);
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    @include prefixed(transform, translateX(-$tipWidth));
+    &:before {
+      right: -$tipWidth;
+    }
+  }
+}

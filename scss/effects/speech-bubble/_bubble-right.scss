@@ -1,0 +1,26 @@
+/* Buddle Right */
+
+@mixin bubble-right {
+  @include hacks();
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    top: calc(50% - #{$tipWidth});
+    border-style: solid;
+    border-width: $tipWidth 0 $tipWidth $tipWidth;
+    border-color: transparent transparent transparent $tipColor;
+    @include prefixed(transition-property, "right");
+    @include prefixed(transition-duration, $mediumDuration);
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    &:before {
+      right: -$tipWidth;
+    }
+  }
+}

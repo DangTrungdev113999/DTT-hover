@@ -9,7 +9,7 @@ $mediumDuration: 0.3s !default;
 $slowDuration: 0.5s !default;
 
 // Colors
-$backgroundColor: #c7dfde !default;
+$backgroundColor: hsl(0, 0%, 88%) !default;
 $primaryColor: #202020 !default;
 $secondaryColor: #666 !default;
 $hightlightColor: #ccc !default;
@@ -19,7 +19,7 @@ $shadowColor: rgba(0, 0, 0, 0.6) !default;
 // Speech bubbles options
 $tipWidth: 10px !default; //the width of the speech bubble tip
 $tipHeight: 10px !default; //the height of the speech bubble tip
-$tipColor: $primaryColor !default;
+$tipColor: $backgroundColor !default;
 
 // Arrows options
 $spaceBetweenTextAndArrows: 2.2em !default;

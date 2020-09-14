@@ -1,0 +1,26 @@
+/* Buddle Bottom */
+
+@mixin bubble-bottom {
+  @include hacks();
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: calc(50% - #{$tipWidth});
+    border-style: solid;
+    border-width: $tipWidth $tipWidth 0 $tipWidth;
+    border-color: $tipColor transparent transparent transparent;
+    @include prefixed(transition-property, "bottom");
+    @include prefixed(transition-duration, $mediumDuration);
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    &:before {
+      bottom: -$tipWidth;
+    }
+  }
+}

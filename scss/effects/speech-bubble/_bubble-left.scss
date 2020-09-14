@@ -1,0 +1,27 @@
+/* Buddle Left */
+
+@mixin bubble-left {
+  @include hacks();
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    left: calc(50% - #{$tipWidth});
+    border-style: solid;
+    border-width: $tipWidth $tipWidth $tipWidth 0px;
+    border-color: transparent $tipColor transparent transparent;
+    @include prefixed(transition-property, "left");
+    @include prefixed(transition-duration, $mediumDuration);
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    &:before {
+      left: -$tipWidth;
+    }
+  }
+}

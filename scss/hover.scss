@@ -286,3 +286,73 @@
     @include box-shadow-outset();
   }
 }
+
+@import "effects/shadow-and-glow-ransitions/shadow-radial";
+@if $includeClasses {
+  .#{$nameSpace}-shadow-radial {
+    @include shadow-radial();
+  }
+}
+
+@import "effects/shadow-and-glow-ransitions/float-shadow";
+@if $includeClasses {
+  .#{$nameSpace}-float-shadow {
+    @include float-shadow();
+  }
+}
+
+@import "effects/speech-bubble/bubble-top";
+@if $includeClasses {
+  .#{$nameSpace}-bubble-top {
+    @include bubble-top();
+  }
+}
+
+@import "effects/speech-bubble/bubble-left";
+@if $includeClasses {
+  .#{$nameSpace}-bubble-left {
+    @include bubble-left();
+  }
+}
+
+@import "effects/speech-bubble/bubble-right";
+@if $includeClasses {
+  .#{$nameSpace}-bubble-right {
+    @include bubble-right();
+  }
+}
+
+@import "effects/speech-bubble/bubble-bottom";
+@if $includeClasses {
+  .#{$nameSpace}-bubble-bottom {
+    @include bubble-bottom();
+  }
+}
+
+@import "effects/speech-bubble/bubble-float-top";
+@if $includeClasses {
+  .#{$nameSpace}-bubble-float-top {
+    @include bubble-float-top();
+  }
+}
+
+@import "effects/speech-bubble/bubble-float-left";
+@if $includeClasses {
+  .#{$nameSpace}-bubble-float-left {
+    @include bubble-float-left();
+  }
+}
+
+@import "effects/speech-bubble/bubble-float-right";
+@if $includeClasses {
+  .#{$nameSpace}-bubble-float-right {
+    @include bubble-float-right();
+  }
+}
+
+@import "effects/speech-bubble/bubble-float-bottom";
+@if $includeClasses {
+  .#{$nameSpace}-bubble-float-bottom {
+    @include bubble-float-bottom();
+  }
+}
