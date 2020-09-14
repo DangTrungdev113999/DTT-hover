@@ -1,13 +1,14 @@
-/* Shrink */
+/* Float */
 
-@mixin shrink {
+@mixin float {
   @include hacks();
   @include prefixed(transition-property, transform);
   @include prefixed(transition-duration, $mediumDuration);
+  @include prefixed(transition-timing-function, ease-in-out);
 
   &:hover,
   &:active,
   &:focus {
-    @include prefixed(transform, scale(0.9));
+    @include prefixed(transform, translateY(-8px));
   }
 }
