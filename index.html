@@ -3,12 +3,61 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DTT-hover</title>
+    <title>Hover me - A collection of CSS3 powered hover effects</title>
     <link rel="stylesheet" href="./css/hover.css" />
+    <link rel="stylesheet" href="./css/home.css" />
   </head>
   <body>
+    <span id="forkongitbug">
+      <a href="https://github.com/DangTrungdev113999/DTT-hover" class="fork">
+        Fork me on GitHub
+      </a>
+    </span>
     <div class="container">
-      <section>
+      <header class="header">
+        <h1 class="header__title dtt-wobble-horizontal">Hover me</h1>
+        <div class="btn-social">
+          <iframe
+            src="https://ghbtns.com/github-btn.html?user=dangtrungdev113999&repo=DTT-hover&type=watch&count=true"
+            allowtransparency="true"
+            frameborder="0"
+            scrolling="0"
+            width="110"
+            height="20"
+          ></iframe>
+        </div>
+        <nav class="nav">
+          <ul class="nav">
+            <li class="nav__item dtt-underline-from-center">
+              <a class="nav__link" href="#2d-transactions">2D</a>
+            </li>
+            <li class="nav__item dtt-underline-from-center">
+              <a class="nav__link" href="#background-transaction">Background</a>
+            </li>
+            <li class="nav__item dtt-underline-from-center">
+              <a class="nav__link" href="#border-transaction">Border</a>
+            </li>
+            <li class="nav__item dtt-underline-from-center">
+              <a class="nav__link" href="#shadow-and-glow">Shadow and Glow</a>
+            </li>
+            <li class="nav__item dtt-underline-from-center">
+              <a class="nav__link" href="#speech-bubbles">Speech Bubbles</a>
+            </li>
+          </ul>
+        </nav>
+        <p>
+          A collection of CSS3 powered hover effects to be applied to links,
+          buttons, logos, SVG, featured images and so on. Easily apply to your
+          own elements, modify or just use for inspiration. Available in CSS,
+          Sass.
+        </p>
+        <a
+          href="https://github.com/DangTrungdev113999/DTT-hover"
+          class="btn btn-download dtt-float-shadow"
+          >Download on GitHub</a
+        >
+      </header>
+      <section id="2d-transactions">
         <h2>2D Transitions</h2>
         <div class="btn dtt-grow">Grow</div>
         <div class="btn dtt-shrink">Shrink</div>
@@ -40,7 +89,7 @@
         <div class="btn dtt-forward">Forward</div>
         <div class="btn dtt-backward">Backward</div>
       </section>
-      <section>
+      <section id="background-transaction">
         <h2>Background Transitions</h2>
         <div class="btn dtt-fade">Fade</div>
         <div class="btn dtt-sweep-to-right">Sweep To Right</div>
@@ -61,7 +110,7 @@
         <div class="btn dtt-shutter-out-vertical">Shutter Out Vertical</div>
       </section>
       <br />
-      <section>
+      <section id="border-transaction">
         <h2>Border Transitions</h2>
         <div class="btn dtt-border-fade">Border Fade</div>
         <div class="btn dtt-hollow">Hollw</div>
@@ -80,7 +129,7 @@
         <div class="btn dtt-overline-center">Overline Center</div>
         <div class="btn dtt-overline-right">Overline Right</div>
       </section>
-      <section>
+      <section id="shadow-and-glow">
         <h2>Shadow and Glow Transitions</h2>
         <div class="btn dtt-shadow">Shadow</div>
         <div class="btn dtt-grow-shadow">Grow Shadow</div>
@@ -90,7 +139,7 @@
         <div class="btn dtt-shadow-radial">Shadow Radial</div>
         <div class="btn dtt-float-shadow">Float Shadow</div>
       </section>
-      <section>
+      <section id="speech-bubbles">
         <h2>Speech Bubbles</h2>
         <div class="btn dtt-bubble-top">Bubble Top</div>
         <div class="btn dtt-bubble-left">Bubble Left</div>
@@ -101,6 +150,8 @@
         <div class="btn dtt-bubble-float-right">Bubble Float Right</div>
         <div class="btn dtt-bubble-float-bottom">Bubble Float Bottom</div>
       </section>
+      <hr />
     </div>
+    <footer>Copyright © 2020 Hover.css</footer>
   </body>
 </html>

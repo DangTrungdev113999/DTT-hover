@@ -12,7 +12,7 @@
     left: 50%;
     right: 50%;
     bottom: 0;
-    height: 4px;
+    height: 2px;
     background: $activeColor;
     @include prefixed(transition-property, "right left");
     @include prefixed(transition-duration, $mediumDuration);
