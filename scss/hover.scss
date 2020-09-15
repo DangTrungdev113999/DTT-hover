@@ -455,8 +455,6 @@
     @include bob();
   }
 }
-<<<<<<< HEAD
-=======
 
 @import "effects/2d-transitions/hang";
 @if $includeClasses {
@@ -485,4 +483,80 @@
     @include skew-forward();
   }
 }
->>>>>>> 32c631d8eda58f57122a89b598b4a11147cdadef
+
+@import "effects/2d-transitions/wobble-horizontal";
+@if $includeClasses {
+  .#{$nameSpace}-wobble-horizontal {
+    @include wobble-horizontal();
+  }
+}
+
+@import "effects/2d-transitions/wobble-vertical";
+@if $includeClasses {
+  .#{$nameSpace}-wobble-vertical {
+    @include wobble-vertical();
+  }
+}
+
+@import "effects/2d-transitions/wobble-to-top-right";
+@if $includeClasses {
+  .#{$nameSpace}-wobble-to-top-right {
+    @include wobble-to-top-right();
+  }
+}
+
+@import "effects/2d-transitions/wobble-to-bottom-right";
+@if $includeClasses {
+  .#{$nameSpace}-wobble-to-bottom-right {
+    @include wobble-to-bottom-right();
+  }
+}
+
+@import "effects/2d-transitions/wobble-top";
+@if $includeClasses {
+  .#{$nameSpace}-wobble-top {
+    @include wobble-top();
+  }
+}
+
+@import "effects/2d-transitions/wobble-bottom";
+@if $includeClasses {
+  .#{$nameSpace}-wobble-bottom {
+    @include wobble-bottom();
+  }
+}
+
+@import "effects/2d-transitions/wobble-skew";
+@if $includeClasses {
+  .#{$nameSpace}-wobble-skew {
+    @include wobble-skew();
+  }
+}
+
+@import "effects/2d-transitions/buzz";
+@if $includeClasses {
+  .#{$nameSpace}-buzz {
+    @include buzz();
+  }
+}
+
+@import "effects/2d-transitions/buzz-out";
+@if $includeClasses {
+  .#{$nameSpace}-buzz-out {
+    @include buzz-out();
+  }
+}
+
+@import "effects/2d-transitions/forward";
+@if $includeClasses {
+  .#{$nameSpace}-forward {
+    @include forward();
+  }
+}
+
+@import "effects/2d-transitions/backward";
+@if $includeClasses {
+  .#{$nameSpace}-backward {
+    @include backward();
+  }
+}

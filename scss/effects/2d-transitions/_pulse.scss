@@ -1,11 +1,21 @@
 /* Pusle */
-@include keyframes(#{$nameSpace}-pulse) {
-  25% {
-    @include prefixed(transform, scale(1.1));
-  }
-  75% {
-    @include prefixed(transform, scale(0.9));
-  }
+/* Rotate */
+.dtt-rotate {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.dtt-rotate:hover,
+.dtt-rotate:active,
+.dtt-rotate:focus {
+  -webkit-transform: rotate(4deg);
+  transform: rotate(4deg);
 }
 
 @mixin pulse {
