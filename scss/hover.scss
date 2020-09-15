@@ -455,3 +455,34 @@
     @include bob();
   }
 }
+<<<<<<< HEAD
+=======
+
+@import "effects/2d-transitions/hang";
+@if $includeClasses {
+  .#{$nameSpace}-hang {
+    @include hang();
+  }
+}
+
+@import "effects/2d-transitions/skew";
+@if $includeClasses {
+  .#{$nameSpace}-skew {
+    @include skew();
+  }
+}
+
+@import "effects/2d-transitions/skew-backward";
+@if $includeClasses {
+  .#{$nameSpace}-skew-backward {
+    @include skew-backward();
+  }
+}
+
+@import "effects/2d-transitions/skew-forward";
+@if $includeClasses {
+  .#{$nameSpace}-skew-forward {
+    @include skew-forward();
+  }
+}
+>>>>>>> 32c631d8eda58f57122a89b598b4a11147cdadef
